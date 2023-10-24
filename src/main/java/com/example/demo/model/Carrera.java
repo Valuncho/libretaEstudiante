@@ -1,22 +1,22 @@
 package com.example.demo.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+
+
+@Table(name = "carrera")
+@Entity
 public class Carrera {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idCarrera;
-    private Integer nombre;
-
-    public Long getIdCarrera() {
-        return idCarrera;
-    }
-
-    public void setIdCarrera(Long idCarrera) {
-        this.idCarrera = idCarrera;
-    }
-
-    public Integer getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(Integer nombre) {
-        this.nombre = nombre;
-    }
+    private String nombre;
 }

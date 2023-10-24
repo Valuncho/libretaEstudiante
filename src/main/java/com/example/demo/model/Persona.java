@@ -24,5 +24,4 @@ public class Persona {
     private String telefono;
     private String mail;
     private String direccion;
-
 }
